@@ -1,0 +1,29 @@
+{
+  "name": "gdscports-boilerplate-node-express",
+  "version": "1.0.0",
+  "description": "A boilerplate for projects using Node and Express, built for TypeScript.\"",
+  "main": "build/index.js",
+  "repository": "git@github.com:gdscports/admins-2021-boilerplate-node-express.git",
+  "author": "Mikael Rozee <mikaelsrozee@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@commitlint/cli": "^13.2.1",
+    "@commitlint/config-angular": "^13.2.0",
+    "@types/node": "^14.11.2",
+    "gts": "^3.1.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^11.2.3",
+    "typescript": "^4.0.3"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "gts clean",
+    "fix": "gts fix",
+    "lint": "gts lint",
+    "prepare": "yarn run build",
+    "pretest": "yarn run build",
+    "posttest": "yarn run lint",
+    "start": "yarn run build && node build/index.js"
+  }
+}
