@@ -7,10 +7,10 @@ config();
 // Init our application's express server
 const app = express();
 
-app.get('/', (_, res) => res.send('Foo'));
+app.use(express.static('./src/client'));
 
 // Get port from process.env, or default to 8080
-const port = Number(process.env.PORT) || 8080;
+const port: number = Number(process.env.PORT) || 8080;
 
 // Start listening for requests
 app.listen(port);
